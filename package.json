@@ -1,0 +1,16 @@
+{
+  "name": "teen-expense-tracker-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TeenTrack - Teenager Expense Tracker root workspace",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm --prefix teen-expense-tracker/backend run dev\" \"npm --prefix teen-expense-tracker/frontend run dev\"",
+    "backend": "npm --prefix teen-expense-tracker/backend run dev",
+    "frontend": "npm --prefix teen-expense-tracker/frontend run dev",
+    "test": "npm --prefix teen-expense-tracker/backend test",
+    "build": "npm --prefix teen-expense-tracker/frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
